@@ -13,4 +13,9 @@ sudo iptables -A INPUT -p tcp --dport 1:19 --name blacklist_7200 --set -j DROP
 sudo iptables -A INPUT -p tcp --dport 23:79 --name blacklist_7200 --set -j DROP
 sudo iptables -A INPUT -p tcp --dport 81:432 --name blacklist_7200 --set -j DROP
 sudo iptables -A INPUT -p tcp --dport 444:1337 --name blacklist_7200 --set -j DROP
+# Tomcat Vulnerability
 sudo iptables -A INPUT -p tcp --dport 8180 --name blacklist_7200 --set -j DROP
+# VNC Vulnerability
+sudo iptables -A INPUT -p tcp --dport 5900 --name blacklist_7200 --set -j DROP
+# MySQL vulnerability
+sudo iptables -A INPUT -p tcp --dport 3306 --name blacklist_7200 --set -j DROP
